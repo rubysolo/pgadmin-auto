@@ -5,8 +5,9 @@ FROM dpage/pgadmin4
 
 USER root
 RUN touch /pgadmin4/servers.json && chown pgadmin /pgadmin4/servers.json
-USER pgadmin
 
+USER pgadmin
+COPY build_servers.py /pgadmin4/build_servers.py
 COPY preboot.sh /preboot.sh
 
 ENTRYPOINT [ "/preboot.sh" ]
