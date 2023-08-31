@@ -1,4 +1,4 @@
-FROM dpage/pgadmin4
+FROM dpage/pgadmin4:7.6
 
 # build an image of pgadmin that auto-connects to the specified server
 # pass the contents of a pgpass file as the env var PGPASS_FILE
